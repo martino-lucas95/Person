@@ -1,3 +1,4 @@
+using System.Globalization;
 using System; 
  
 namespace PosterObjectsClassesMessages 
@@ -12,13 +13,21 @@ namespace PosterObjectsClassesMessages
             this.name = name; 
             this.id = id;
         } 
-
-
-
         public void IntroduceYourself() 
         { 
             Console.WriteLine( 
                 $"Soy {this.name} y mi cédula es {this.id}"); 
         } 
+
+        public void NameIsValid() 
+        { 
+            if(IdUtils.IdIsValid(this.id) && this.name.Trim() != ""){
+                this.IntroduceYourself();
+            }
+            else{
+                Console.WriteLine("Nombre o Cedula invalido");
+            }
+        } 
+
     } 
 }
