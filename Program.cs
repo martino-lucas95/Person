@@ -1,8 +1,8 @@
 using System;
 using System.Linq;
-using PosterObjectsClassesMessages;
 
-namespace Person
+namespace PosterObjectsClassesMessages
+
 {
     public class IdUtils
     {
