@@ -5,13 +5,14 @@ namespace PosterObjectsClassesMessages
 { 
     public class Person 
     { 
-        public string name{ get; private set; }
-        public string id{ get; private set; }
+        private string name{ get; set; }
+        private string id{ get; set; }
 
         public Person(string name, string id) 
         { 
             this.name = name; 
             this.id = id;
+            NameIsValid();
         } 
         public void IntroduceYourself() 
         { 
